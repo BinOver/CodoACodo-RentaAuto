@@ -15,7 +15,7 @@ public class Turismo extends Vehiculo{
                     boolean marchaAutomatica){
         super(matricula, marca, modelo, color, tarifa);
         this.puertas = puertas;
-        this.marchaAutomatica = this.marchaAutomatica;
+        this.marchaAutomatica = marchaAutomatica;
     }
 
 //Setters
@@ -38,7 +38,7 @@ public class Turismo extends Vehiculo{
     
     public String getAtributos(){
         return super.getAtributos() + //Polimorfismo
-                " Puertas: " + this.puertas +
-                " Marcha automatica: " + this.marchaAutomatica;
+                " \nPuertas: " + this.puertas +
+                "\nMarcha automatica: " + this.marchaAutomatica;
     }
 }
