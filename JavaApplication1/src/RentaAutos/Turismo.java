@@ -37,7 +37,7 @@ public class Turismo extends Vehiculo{
     }
     
     public String getAtributos(){
-        return super.getAtributos() +
+        return super.getAtributos() + //Polimorfismo
                 " Puertas: " + this.puertas +
                 " Marcha automatica: " + this.marchaAutomatica;
     }

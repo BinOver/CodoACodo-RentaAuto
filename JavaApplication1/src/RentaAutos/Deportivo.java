@@ -27,7 +27,7 @@ public class Deportivo extends Vehiculo{
     }
     
     public String getAtributos(){
-        return super.getAtributos() + 
+        return super.getAtributos() + //Polimorfismo
                 " Cilindrada (cm3): " + this.cilindrada;
     }
 }

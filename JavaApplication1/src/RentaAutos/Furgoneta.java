@@ -36,7 +36,7 @@ public class Furgoneta extends Vehiculo{
     }
     
     public String getAtributos(){
-        return super.getAtributos() +
+        return super.getAtributos() + //Polimorfismo
                 " Carga (kg): " + this.carga +
                 " Volumen (m3): " + this.volumen;
     }
