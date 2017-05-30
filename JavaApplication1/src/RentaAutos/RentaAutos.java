@@ -54,7 +54,9 @@ public class RentaAutos {
         
 //Impresion Atributos
     System.out.print("\nVehiculo:\n" + miVehiculo.getAtributos() + "\n");
+    //Sobrecarga de constructor Vehiculo
     System.out.print("\nVehiculo:\n" + miVehiculoSuper.getAtributos() + "\n");
+    //Herencia de Vehiculo
     System.out.print("\nTurismo:\n" + miTurismo.getAtributos() + "\n");
     System.out.print("\nDeportivo:\n" + miDeportivo.getAtributos() + "\n");
     System.out.print("\nFurgoneta:\n" + miFurgoneta.getAtributos() + "\n");
