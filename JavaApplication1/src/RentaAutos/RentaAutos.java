@@ -6,40 +6,66 @@ public class RentaAutos {
         
         
 //Declaracion e instanciacion de Objetos
+        //Vehiculo Supercalse Default
         Vehiculo miVehiculo = new Vehiculo ("4050 ABJ", 
-                                                                    "VM", 
-                                                                    "GTI", 
-                                                                    "Blanco", 
-                                                                    100.0);
-        
+                                            "VM", 
+                                            "GTI", 
+                                            "Blanco", 
+                                            100.0);
+        //Vehiculo Supercarga
+        Vehiculo miVehiculoSuper = new Vehiculo ("4051 JBA", 
+                                            "VM", 
+                                            "GTI", 
+                                            "Negro");
+        //Turismo Hereda de Vehiculo
         Turismo miTurismo = new Turismo ("4060 TUR",
-                                                                    "Skoda",
-                                                                    "Fabia",
-                                                                    "Blanco",
-                                                                    90.0,
-                                                                    2,
-                                                                    false);
-        
+                                         "Skoda",
+                                         "Fabia",
+                                         "Blanco",
+                                         90.0,
+                                         2,
+                                         false);
+        //Deportivo Hereda de Vehiculo
         Deportivo miDeportivo = new Deportivo ("4070 DEP",
-                                                                            "Ford",
-                                                                            "Mustang",
-                                                                            "Rojo",
-                                                                            150.0,
-                                                                            2000);
-        
+                                               "Ford",
+                                               "Mustang",
+                                               "Rojo",
+                                               150.0,
+                                               2000);
+        //Furgoneta Hereda de Vehiculo
         Furgoneta miFurgoneta = new Furgoneta ("4080 FUR",
-                                                                             "Fiat",
-                                                                             "Ducato",
-                                                                             "Azul",
-                                                                             80.0,
-                                                                             1200,
-                                                                             8);
+                                               "Fiat",
+                                               "Ducato",
+                                               "Azul",
+                                               80.0,
+                                               1200,
+                                               8);
+        //Cliente para Extension de clases
+        Cliente cliente1 = new Cliente ("30435624x", 
+                                        "Juan", 
+                                        "Perez");
+        //VehiculoAlquilado extension de cliente1 y miVehiculo
+        VehiculoAlquilado alquiler1 = new VehiculoAlquilado(cliente1, 
+                                                            miVehiculo,
+                                                            11,
+                                                            11,
+                                                            2011,
+                                                            2);
         
 //Impresion Atributos
     System.out.print("\nVehiculo:\n" + miVehiculo.getAtributos() + "\n");
+    System.out.print("\nVehiculo:\n" + miVehiculoSuper.getAtributos() + "\n");
     System.out.print("\nTurismo:\n" + miTurismo.getAtributos() + "\n");
     System.out.print("\nDeportivo:\n" + miDeportivo.getAtributos() + "\n");
     System.out.print("\nFurgoneta:\n" + miFurgoneta.getAtributos() + "\n");
+    //Impresion Extension de clase
+    System.out.println("\nVehiculo alquilado");
+    System.out.println("Cliente: " + 
+                        alquiler1.getCliente().getNif() + " " +
+                        alquiler1.getCliente().getNombre() + " " +
+                        alquiler1.getCliente().getApellidos());
+    System.out.println("Vehiculo: " + 
+                        alquiler1.getVehiculo().getMatricula());
     }
     
 }
