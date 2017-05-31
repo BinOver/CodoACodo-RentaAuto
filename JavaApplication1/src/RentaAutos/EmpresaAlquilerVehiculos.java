@@ -11,7 +11,8 @@ public class EmpresaAlquilerVehiculos {
     private Vehiculo[] vehiculos;
     private int totalAlquiler;
     private VehiculoAlquilado[] alquileres;
-    
+ 
+//Consltructor
     public EmpresaAlquilerVehiculos(String cif, String nombre, String paginaWeb){
         this.cif = cif;
         this.nombre=nombre;
@@ -24,6 +25,7 @@ public class EmpresaAlquilerVehiculos {
         this.alquileres = new VehiculoAlquilado[100];
     }
 
+//Setters
     public void setCif(String cif) {
         this.cif = cif;
     }
@@ -36,6 +38,7 @@ public class EmpresaAlquilerVehiculos {
         this.paginaWeb = paginaWeb;
     }
 
+//Getters
     public String getCif() {
         return cif;
     }
@@ -71,4 +74,31 @@ public class EmpresaAlquilerVehiculos {
     public VehiculoAlquilado[] getAlquileres() {
         return alquileres;
     }  
+  
+//Metodos
+    public void registrarCliente(Cliente cliente){
+        this.clientes[this.totalClientes] = cliente;
+        this.totalClientes++;
+    }
+    
+    public void registrarVehiculo(Vehiculo vehiculo){
+        this.vehiculos[this.totalVehiculos] = vehiculo;
+        this.totalVehiculos++;
+    }
+    
+    public void imprimirClientes(){
+        System.out.println("NIF cliente\tNombre\n");
+        
+        for(int i=0;i<this.totalClientes;i++){
+            System.out.println(clientes[i].getAtributos());
+        }
+    }
+    
+    public void imprimirVehiculos(){
+        System.out.print("Matricula\tModelo " + "\tImporte Disponible\n");
+        
+        for(int i=0; i<this.totalVehiculos;i++) {
+            System.out.println(vehiculos[i].getAtributos());
+        }
+    }
 }
