@@ -37,5 +37,10 @@ public class Cliente {
         return apellidos;
     }
     
+        public String getAtributos() {
+        return "NIF: " + this.nif + 
+                    " \nNombre: " + this.nombre + 
+                    " \nApellidos: " + this.apellidos+"";
+        }
     
 }

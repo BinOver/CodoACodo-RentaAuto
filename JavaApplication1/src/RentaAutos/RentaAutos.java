@@ -25,6 +25,16 @@ public class RentaAutos {
                                          90.0,
                                          2,
                                          false);
+        //Turismo con Conversion ascendente de tipos
+        Vehiculo miTurismoConv = new Turismo ("4061 TURC",
+                                         "Skoda",
+                                         "Fabia",
+                                         "Violeta",
+                                         950.0,
+                                         3,
+                                         true);
+        //Turismo con Conversion descendente de tipos
+        Turismo miTurismoCDes = (Turismo) miTurismoConv; 
         //Deportivo Hereda de Vehiculo
         Deportivo miDeportivo = new Deportivo ("4070 DEP",
                                                "Ford",
@@ -60,6 +70,9 @@ public class RentaAutos {
     System.out.print("\nTurismo:\n" + miTurismo.getAtributos() + "\n");
     System.out.print("\nDeportivo:\n" + miDeportivo.getAtributos() + "\n");
     System.out.print("\nFurgoneta:\n" + miFurgoneta.getAtributos() + "\n");
+    //Herencia con conversion de tipo
+    System .out.print("\nFurgoneta:\n" + miTurismoConv.getAtributos() + "\n");
+    System .out.print("\nFurgoneta:\n" + miTurismoCDes.getAtributos() + "\n");
     //Impresion Extension de clase
     System.out.println("\nVehiculo alquilado");
     System.out.println("Cliente: " + 
