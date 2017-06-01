@@ -91,18 +91,17 @@ public class EmpresaAlquilerVehiculos {
     }
     
     public void imprimirClientes(){
-        System.out.println("NIF cliente\tNombre\n");
-        
+       System.out.println("NIF cliente\tNombre\tApellidos");
         for(int i=0;i<this.totalClientes;i++){
-            System.out.println(clientes[i].getAtributos());
+            System.out.println(clientes[i].getAtributosCliente());
         }
+        System.out.println();
     }
     
     public void imprimirVehiculos(){
-        System.out.print("Matricula\tModelo " + "\tImporte Disponible\n");
-        
+        System.out.print("Matricula\tModelo\t" +"\tColor\t"+ "Importe Disponible\n");
         for(int i=0; i<this.totalVehiculos;i++) {
-            System.out.println(vehiculos[i].getAtributos());
+            System.out.println(vehiculos[i].getAtributosVehiculo());
         }
     }
     

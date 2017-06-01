@@ -86,4 +86,12 @@ public class Vehiculo {
                 " \nColor: " + this.color + " Tarifa: " + this.tarifa + 
                 " \nDisponible: " + this.disponible +"";
      }
+    
+    public String getAtributosVehiculo() {
+        return this.matricula + "\t" +
+                    this.marca + " " + this.modelo + "\t" +
+                    this.color + "\t" +
+                    this.tarifa + "\t" +
+                    this.disponible +"";
+     }
 }

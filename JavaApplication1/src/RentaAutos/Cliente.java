@@ -42,5 +42,11 @@ public class Cliente {
                     " \nNombre: " + this.nombre + 
                     " \nApellidos: " + this.apellidos+"";
         }
+        
+        public String getAtributosCliente() {
+        return  this.nif + "\t" + 
+                     this.nombre + "\t" + 
+                     this.apellidos+"";
+        }
     
 }

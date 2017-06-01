@@ -61,6 +61,13 @@ public class RentaAutos {
                                                             11,
                                                             2011,
                                                             2);
+        //EmpresaAlquilerVehiculos instanciacion (Array)
+        EmpresaAlquilerVehiculos easydrive = new EmpresaAlquilerVehiculos("A-28-187189", "easy drive", "www.easydrive.com");
+        easydrive.registrarCliente(new Cliente("X5618927C", "Juan", "Gonzalez Lopez"));
+        easydrive.registrarCliente(new Cliente("Z75618927C","Luis","Fernandez"));
+        
+        easydrive.registrarVehiculo(new Turismo("4060 TUR", "Skoda", "Fabia", "Blanco", 90.0, 2, false));
+        easydrive.registrarVehiculo(new Deportivo("4070 DEP", "Ford", "Mustang", "Rojo", 150.0, 2000));
         
 //Impresion Atributos
     System.out.print("\nVehiculo:\n" + miVehiculo.getAtributos() + "\n");
@@ -74,13 +81,17 @@ public class RentaAutos {
     System .out.print("\nFurgoneta:\n" + miTurismoConv.getAtributos() + "\n");
     System .out.print("\nFurgoneta:\n" + miTurismoCDes.getAtributos() + "\n");
     //Impresion Extension de clase
-    System.out.println("\nVehiculo alquilado");
+    System.out.println("\nVehiculo alquilado:");
     System.out.println("Cliente: " + 
                         alquiler1.getCliente().getNif() + " " +
                         alquiler1.getCliente().getNombre() + " " +
                         alquiler1.getCliente().getApellidos());
     System.out.println("Vehiculo: " + 
                         alquiler1.getVehiculo().getMatricula());
-    }
-    
+    ///Impresion Array easydrive
+    System.out.println("\nClientes de la empresa:");
+    easydrive.imprimirClientes();
+    System.out.println("\nVehiculos de la empresa:");
+    easydrive.imprimirVehiculos();
+    } 
 }
