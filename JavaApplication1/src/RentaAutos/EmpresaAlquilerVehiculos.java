@@ -129,7 +129,6 @@ public class EmpresaAlquilerVehiculos {
         diaHoy = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
         mesHoy = Calendar.getInstance().get(Calendar.MONTH);
         anioHoy = Calendar.getInstance().get(Calendar.YEAR);
-        
         if (vehiculo.isDisponible()){
             vehiculo.setDisponible(false);
             this.alquileres[this.totalAlquiler] = new VehiculoAlquilado (cliente, vehiculo, diaHoy, mesHoy, anioHoy, dias);
@@ -139,7 +138,6 @@ public class EmpresaAlquilerVehiculos {
     
     public void recibirVehiculo(String matricula){
         Vehiculo vehiculo = getVehiculo(matricula);
-        
         if (vehiculo != null){
             vehiculo.setDisponible(true);
         }
